@@ -62,7 +62,9 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: After submitting a new toy, I checked out Chrome Dev Tools'
+  Network tab, found the toys event, and found a typo in the model name: `Toys`
+  instead of `Toy`.
 
 - Update the number of likes for a toy
 
@@ -70,4 +72,5 @@ developing your own process.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: In `routes.rb`, I saw that `:destroy` was missing from
+  `resources :toys`, so I added it.

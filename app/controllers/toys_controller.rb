@@ -7,7 +7,7 @@ class ToysController < ApplicationController
   end
 
   def create
-    toy = Toys.create(toy_params)
+    toy = Toy.create(toy_params)
     render json: toy, status: :created
   end
 
@@ -23,7 +23,7 @@ class ToysController < ApplicationController
   end
 
   private
-  
+
   def toy_params
     params.permit(:name, :image, :likes)
   end
